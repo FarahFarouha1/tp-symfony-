@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block title%} Liste des taches{% endblock %}
+{% block body %}
+{% if taches %}
+<table id="articles" class="table table-striped">
+<thead>
+<tr>
+<th>tahche</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+{% for tache in taches %}
+<tr>
+<td>{{ tache}}</td>
+<td>
+<a href="/tache/1" class="btn btn-dark">Détails</a>
+</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% else %}
+p>Aucun taches</p>
+{% endif %}
+{% endblock %}
